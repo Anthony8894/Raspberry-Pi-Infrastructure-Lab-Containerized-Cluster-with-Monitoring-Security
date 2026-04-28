@@ -107,3 +107,8 @@ drwxr-xr-x 2 piborgergade1 piborgergade1 4096 Apr 26 23:18 /mnt/appdata/jellyfin
 drwxr-xr-x 2 piborgergade1 piborgergade1 4096 Apr 26 23:18 /mnt/media
 drwxr-xr-x 2 piborgergade1 piborgergade1 4096 Apr 26 22:58 /opt/stacks/jellyfin
 * next up: create/configre docker-compose.yml
+
+## 04/27/2026
+* configured jellyfin, it's now usualbe
+* can connect via https://192.168.50.149:8086
+* created tv and movie folder
