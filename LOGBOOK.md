@@ -112,3 +112,6 @@ drwxr-xr-x 2 piborgergade1 piborgergade1 4096 Apr 26 22:58 /opt/stacks/jellyfin
 * configured jellyfin, it's now usualbe
 * can connect via https://192.168.50.149:8086
 * created tv and movie folder
+
+## 04/28/2026
+* updated title and readme.md file

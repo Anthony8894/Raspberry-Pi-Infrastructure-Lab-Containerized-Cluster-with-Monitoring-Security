@@ -1,28 +1,62 @@
-# Rasberry Pi-Home-Cluster
+# Raspberry Pi Infrastructure Lab – Containerized Cluster with Monitoring & Security
 
-This repository documents my home Raspberry Pi cluster which both runs ubuntu server. My plan is to simulate a small production environment using containerization, monitors, and security tools commonly found in enterprise IT. 
-My lab is hands-on, production-minded, and well documented, this serves as a learning environment + portfolio project.
+This repository documents my Raspberry Pi home lab running Ubuntu Server.  
+The goal of this project is to simulate a small production-style environment using containerization, monitoring, and security tools commonly used in real IT environments.
 
-## 🎯 Goals for this project
+This lab is hands-on and continuously evolving. I’m using it to learn, test, and document real-world concepts while building something I can also use as a portfolio project.
 
-- Gain hands-on experience with **Linux system administration**
-- Design and operate a **multi-node containerized environment**
-- Practice **monitoring, logging, and security operations**
-- Document infrastructure clearly and professionally
-- Build practical experience aligned with **sysadmin, infrastructure, and cybersecurity roles**
+---
+
+## 💡 Why This Project Matters
+
+I wanted something beyond basic labs where I could actually build and manage systems over time.
+
+Through this project, I’m working on:
+- Managing Linux servers
+- Running services across multiple nodes
+- Setting up monitoring and observability
+- Improving my troubleshooting and documentation skills
+
+These are all things I’ll need for roles like system administration or cloud/infrastructure.
+
+---
+
+## 🎯 Goals
+
+- Get more comfortable with **Linux system administration**
+- Build a **multi-node containerized environment**
+- Learn how monitoring, logging, and alerting work
+- Practice documenting everything clearly
+- Gain experience relevant to **sysadmin, cloud, and security roles**
+
+---
+
+## 🚧 Current Status
+
+- ✅ Docker Swarm cluster is up and running
+- ✅ Portainer installed for management
+- ✅ Node Exporter running on both nodes
+- ⚙️ Prometheus & Grafana (working on it)
+- ⚙️ Reverse proxy with Traefik (in progress)
+- 📌 Planning to add logging and SIEM later (Wazuh)
+
+> Still actively working on this and adding more over time.
 
 ---
 
 ## 🧱 Cluster Overview
 
-- **Nodes:**  
-  - `pi-main` (Manager)  
+- **Nodes:**
+  - `pi-main` (Manager)
   - `pi-worker` (Worker)
 
-- **Operating System:** Ubuntu Server LTS (fresh install)
+- **OS:** Ubuntu Server LTS  
 - **Architecture:** ARM64 (Raspberry Pi)
 
-> This cluster simulates a small production setup with separation of roles, centralized management, and monitoring.
+The idea here is to simulate a small production setup with:
+- Separate roles (manager/worker)
+- Container orchestration
+- Monitoring across nodes
 
 ---
 
@@ -34,34 +68,78 @@ My lab is hands-on, production-minded, and well documented, this serves as a lea
 - Portainer CE
 
 ### Monitoring & Observability
-- Prometheus
-- Grafana
+- Prometheus (in progress)
+- Grafana (in progress)
 - Node Exporter
 - cAdvisor
 - Uptime Kuma
 
 ### Security
-- Wazuh SIEM
-- Log collection & alerting
+- Wazuh SIEM (planned)
+- Log collection and alerting (planned)
 
 ### Applications
 - Nextcloud (self-hosted file service)
 
 ### Networking & Access
 - SSH (key-based authentication)
-- Firewall (UFW)
-- Secure remote access (Tailscale / WireGuard)
+- UFW firewall
+- Tailscale (secure remote access)
+
+---
+
+## 🌐 Service Access
+
+| Service   | Access |
+|----------|--------|
+| Portainer | http://<server-ip>:9000 |
+| Grafana   | (coming soon via reverse proxy) |
+| Traefik   | (in progress) |
 
 ---
 
 ## 🗺️ Architecture
 
-> Diagrams and visuals are available in the `architecture/` directory.
+Diagrams are available in the `architecture/` folder.
 
+Main ideas:
 - Multi-node Docker Swarm
-- Overlay networking for services
-- Centralized monitoring and logging
-- Persistent volumes for stateful services
+- Overlay networking
+- Centralized monitoring setup
+- Persistent storage for services
+
+---
+
+## 🔮 Planned Infrastructure (Next Phase)
+
+As I keep building this out, I want to expand into a more complete setup:
+
+- 🧠 **Proxmox Host**
+  - Run on dedicated hardware (likely repurposed device)
+  - Use it to host VMs for testing and services
+
+- 🔥 **Firewall Appliance**
+  - pfSense or OPNsense
+  - Learn VLANs, segmentation, and network security
+
+- 🌐 **Managed Switch (In Progress)**
+  - Already have the hardware
+  - Planning to set up VLANs and improve network structure
+
+- 💻 **Windows / Active Directory**
+  - Simulate an enterprise environment
+  - Practice domain services and group policy
+
+---
+
+## 🧠 What I’m Learning
+
+- Linux administration (Ubuntu Server)
+- Docker and container orchestration
+- Networking basics (ports, routing, reverse proxy concepts)
+- Monitoring and observability
+- Security basics (SSH, firewall, VPN)
+- Troubleshooting real systems instead of just following tutorials
 
 ---
 
@@ -90,4 +168,3 @@ pi-home-cluster/
 │   ├── security/
 │   └── apps/
 ├── screenshots/
-└── LICENSE
