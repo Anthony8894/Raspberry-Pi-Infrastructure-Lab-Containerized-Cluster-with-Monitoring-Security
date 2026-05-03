@@ -90,9 +90,12 @@ The idea here is to simulate a small production setup with:
 
 ## 🌐 Service Access
 
+- all of these are temporary and will change from time to time! 
+- I will need to figure out a way to store these
+
 | Service   | Access |
 |----------|--------|
-| Portainer | http://<server-ip>:9000 |
+| Portainer | http://192.168.50.199:9000 |
 | Grafana   | (coming soon via reverse proxy) |
 | Traefik   | (in progress) |
 
