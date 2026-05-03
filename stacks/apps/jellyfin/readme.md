@@ -30,3 +30,9 @@ This project helps me practice:
 /mnt/media
 ├── movies
 └── tv-shows
+
+
+```
+
+## NOTE 
+PLEASE create folders before starting installation, it will be much easier to navigate. 
