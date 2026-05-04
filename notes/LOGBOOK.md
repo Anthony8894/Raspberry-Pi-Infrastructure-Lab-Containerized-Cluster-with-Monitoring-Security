@@ -115,3 +115,8 @@ drwxr-xr-x 2 piborgergade1 piborgergade1 4096 Apr 26 22:58 /opt/stacks/jellyfin
 
 ## 04/28/2026
 * updated title and readme.md file
+
+
+## 05/03/2026
+* installed homepage via docker compose, tired of remembering all the services. 
+* next up: MFA? or password manager? 

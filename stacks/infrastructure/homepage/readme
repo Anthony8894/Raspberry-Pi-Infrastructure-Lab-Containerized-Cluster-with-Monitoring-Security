@@ -1,0 +1,44 @@
+## Installation
+
+Homepage was deployed using Docker Compose on `pi-main`.
+
+Basic setup:
+
+```bash
+sudo mkdir -p /opt/stacks/homepage/config
+cd /opt/stacks/homepage
+sudo nano docker-compose.yml
+docker compose up -d
+```
+
+
+# Homepage Dashboard
+
+## Overview
+
+This folder contains the Docker Compose setup for my self-hosted Homepage dashboard.
+
+Homepage is used as a central dashboard for my homelab. Instead of trying to remember every service URL, I can use this dashboard to organize links to the tools and applications running in my environment.
+
+## Why I Added This
+
+As my homelab grows, it becomes harder to keep track of every service, port, and web interface.
+
+This dashboard helps me keep everything in one place, such as:
+
+- Portainer
+- Jellyfin
+- Nextcloud
+- Traefik
+- Grafana
+- Prometheus
+- Other future services
+
+This also makes the homelab feel more organized and easier to manage.
+
+## Folder Location
+
+On the Raspberry Pi, this stack is stored at:
+
+```bash
+/opt/stacks/homepage
