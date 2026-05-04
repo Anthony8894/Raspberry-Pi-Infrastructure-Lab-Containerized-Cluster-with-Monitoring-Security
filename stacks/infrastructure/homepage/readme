@@ -1,5 +1,7 @@
 ## Installation
 
+link/reference: https://gethomepage.dev/
+
 Homepage was deployed using Docker Compose on `pi-main`.
 
 Basic setup:
