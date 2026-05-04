@@ -12,6 +12,11 @@ docker compose up -d
 ```
 
 
+# access it
+acess it via: http://[pi-main-ip]:3001
+
+
+
 # Homepage Dashboard
 
 ## Overview
