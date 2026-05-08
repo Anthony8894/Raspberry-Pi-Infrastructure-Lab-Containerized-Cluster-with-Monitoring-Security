@@ -1,0 +1,52 @@
+# Vaultwarden
+
+## Overview
+
+Vaultwarden is a self-hosted password manager used to securely store homelab credentials, service logins, notes, and other sensitive information.
+
+This deployment runs in Docker and is routed through Traefik using HTTPS.
+
+Vaultwarden is compatible with Bitwarden clients, but it is much lighter than the official Bitwarden self-hosted stack. This makes it a good fit for a Raspberry Pi homelab environment.
+
+## Why I Added This
+
+As my homelab grew, I started needing a better way to keep track of passwords, admin accounts, service logins, and recovery information.
+
+Instead of storing passwords in plain text files, notes, or spreadsheets, I wanted to use a real password manager with encrypted storage.
+
+This project helps me practice:
+
+- Secure self-hosting
+- Docker Compose deployments
+- Reverse proxy routing with Traefik
+- HTTPS with a custom domain
+- Managing sensitive services in a homelab
+- Documenting security-related infrastructure
+
+## Service Details
+
+| Item | Details |
+|---|---|
+| Service | Vaultwarden |
+| Purpose | Self-hosted password manager |
+| Platform | Docker |
+| Reverse Proxy | Traefik |
+| Access URL | `https://vaultwarden.anthonylearchive.com` |
+| Data Directory | `/opt/stacks/vaultwarden/vw-data` |
+| Container Name | `vaultwarden` |
+
+## Folder Location on Server
+
+Vaultwarden is deployed on the Raspberry Pi under:
+
+```bash
+/opt/stacks/vaultwarden
+```
+The main files include:
+
+/opt/stacks/vaultwarden/
+├── docker-compose.yml
+└── vw-data/
+
+Don't delete /opt/stacks/vaultwarden/vw-data
+
