@@ -3,11 +3,34 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     restart: unless-stopped
+
     ports:
       - "3001:3000"
-    environment:
-      HOMEPAGE_ALLOWED_HOSTS: 192.168.50.199:3001,dashboard.anthonylearchive.com
+
     volumes:
       - ./config:/app/config
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: America/Chicago
+      HOMEPAGE_ALLOWED_HOSTS: homepage.anthonylearchive.com,192.168.50.199:3001,localhost:3000,127.0.0.1:3000
+
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+
+      - "traefik.http.routers.homepage.rule=Host(`homepage.anthonylearchive.com`)"
+      - "traefik.http.routers.homepage.entrypoints=websecure"
+      - "traefik.http.routers.homepage.tls=true"
+      - "traefik.http.routers.homepage.tls.certresolver=letsencrypt"
+
+      - "traefik.http.services.homepage.loadbalancer.server.port=3000"
+
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
