@@ -10,6 +10,7 @@ Some of my homelab services can be reached using subdomains, such as:
 homepage.example.com
 nextcloud.example.com
 portainer.example.com
+```
 
 These subdomains are routed through Traefik, which acts as my reverse proxy.
 
