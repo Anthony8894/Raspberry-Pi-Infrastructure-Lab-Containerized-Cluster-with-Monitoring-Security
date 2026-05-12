@@ -16,7 +16,7 @@ These subdomains are routed through Traefik, which acts as my reverse proxy.
 
 Since some services are public, I need to decide which ones need extra protection.
 
-Why This Matters
+## Why This Matters
 
 If a service is on a public subdomain, people on the internet may be able to reach the login page.
 
